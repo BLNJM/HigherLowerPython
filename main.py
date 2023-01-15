@@ -14,12 +14,15 @@ if __name__ == '__main__':
     # get guess from the user
     while True:
         try:
-            guess = int(input('The first number is ' + str(first_num) + '. Please enter a number between 1-20: '))
+            guess = input('Number is ' + str(first_num) + '. Will the next be "higher" or "lower"? (between 1-20):')
 
-            # only accept guess if it is within accepted range
-            if guess in range(1, 21):
-                print("Your choice was: ", guess)
+            # only accept guess if it a valid guess
+            if guess.lower() == 'higher' or guess.lower() == 'lower':
                 break
         # only accept guess if it is an integer
         except ValueError:
-            print('Invalid response, please enter a number between 1-20')
+            print('Invalid response, please enter either "higher" or "lower"')
+
+        second_num = generate_num()
+
+

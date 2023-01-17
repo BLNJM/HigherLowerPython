@@ -27,6 +27,8 @@ if __name__ == '__main__':
     print('The first number is ' + str(first_num) + ' and the second number is ' + str(second_num))
 
     # Results logic
+    if first_num == second_num:
+        print('Both numbers were the same')
     if first_num > second_num and guess.casefold() == 'lower':
         print('You were correct!')
     elif first_num < second_num and guess.casefold() == 'higher':
